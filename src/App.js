@@ -15,12 +15,17 @@ const App = () => {
     "?"
   ])
 
+  const handleClick = (i) => {
+    board[i] = "🏝"
+    setBoard([...board])
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
       <div className="board">
         {board.map((square, index) => {
-          return <Square square={square} index={index} key={index}/>
+          return <Square square={square} index={index} handleClick={handleClick} key={index}/>
         })}
       </div>
     </>

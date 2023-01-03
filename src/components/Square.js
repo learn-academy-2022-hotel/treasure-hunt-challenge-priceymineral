@@ -1,14 +1,9 @@
 import React from "react"
 
-const Square = ({ square, index }) => {
-
-  const handleClick = () => {
-    alert(index)
-  }
-  
+const Square = ({ square, index, handleClick }) => {
   return (
     <>
-      <div className="square" onClick={handleClick}>{square}</div>
+      <div className="square" onClick={()=>handleClick(index)}>{square}</div>
     </>
   )
 }
